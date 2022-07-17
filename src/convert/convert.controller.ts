@@ -39,7 +39,7 @@ export class ConvertController {
         params._match[0],
         async (filePath: string): Promise<void> => {
           try {
-            await this.answer.send(new Voice('path', filePath));
+            await this.answer.send(new Voice('path', filePath, null, false));
           } catch (e: any) {
             console.error(e);
           }
